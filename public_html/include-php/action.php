@@ -6,16 +6,16 @@ if(!isset($_GET['action'])) {
 else {
  //Else figure out which page to include
   if($_GET['action']=="play") {
-    include("include-php/game1.php");
+    include("../include-php/game1.php");
   }
   elseif($_GET['action']=="respond") {
-    include("include-php/respond.php");
+    include("../include-php/respond.php");
   }
   elseif($_GET['action']=="offer") {
-    include("include-php/offer.php");
+    include("../include-php/offer.php");
   }
   else {
-    include("include-html/index.html");
+    include("../include-html/index.html");
   }
 }
 ?>
