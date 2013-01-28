@@ -2,12 +2,14 @@
 <html>
 <head>
 <title>Ultimatum Game</title>
-<link rel="stylesheet" type="text/css" href="/UltimatumGame/public_html/main.css">
-</head>
-<body>
-<div id="content">
-<h1>Ultimatum Game</h1>
- <?php include("include-html/index.php") ?>
+<link rel="stylesheet" type="text/css" href="/UltimatumGame/public_html/main.css" />
+   </head>
+   <body>
+   <div id="content">
+   <h1>Ultimatum Game</h1>
+   <?php
+   include("include-php/action.php");
+?>
 </div>
 </body>
 </html>

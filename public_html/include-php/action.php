@@ -6,17 +6,17 @@ if(!isset($_GET['action']))
   }
 else
   { //Else figure out which page to include
-    if($_GET['action']=="forum")
+    if($_GET['action']=="offer")
       {
-	include("2IAcowwxOi/forum.php");
+	include("include-html/offer.php");
       }
     elseif($_GET['action']=="thread")
       {
-	include("2IAcowwxOi/thread.php");
+	include("include-html/respond.php");
       }
     else
       {
-	include("inlude-html/index.html");
+	include("include-html/index.php");
       }
   }
 ?>
