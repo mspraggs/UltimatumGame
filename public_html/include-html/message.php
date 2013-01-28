@@ -1,5 +1,5 @@
 <?php
-function error($message) {
+function message($message) {
 ?>
   <p><?php echo $message; ?></p>
 <?php
