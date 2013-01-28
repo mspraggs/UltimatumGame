@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Ultimatum Game</title>
+<link rel="stylesheet" type="text/css" href="/UltimatumGame/public_html/main.css">
 </head>
 <body>
 <div id="content">
