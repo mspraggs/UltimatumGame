@@ -3,9 +3,8 @@
 <head>
 <title>Ultimatum Game</title>
 </head>
-
 <body>
-<div>
+<div id="content">
 <h1>Ultimatum Game</h1>
  <?php include("include-html/index.php") ?>
 </div>
