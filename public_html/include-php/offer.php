@@ -1,26 +1,34 @@
 <?php
 include("include-html/message.php");
 
-//Check to see if the user is trying to 
+//Check to see if the user is trying to submit their offer
 if(!isset($_POST['offer'])) {
+  //If not, give them the form.
   include("include-html/offer.html");
 }
 else {
   if(filter_var($_POST['offer'],FILTER_VALIDATE_INT)) {
     //Grab the numerical value from the post data.
     $offer = filter_var($_POST['offer'],FILTER_SANITIZE_NUMBER_INT);
+    //Need to check that the value is in the specified range.
     if($offer <= 100 && $offer >= 0) {
+      //All systems go, so import and use the database connection function.
       include("../protected-324hjk/sql_connect.php");
       sql_connect("ultimatumgame");
+      //Check if they've entered an email address
       if($_POST['email'] != "" && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+	//If they have, then extract it and create the query appropriately.
 	$email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
 	$query = "insert into game1 (id,player,offer,email,contact) values (0, 1, '$offer', '$email', 'Y')";
       }
       else {
+	//If no email, then don't add one to the table.
 	$query = "insert into game1 (id,player,offer,contact) values (0, 1, '$offer', 'N')";
       }
+      //Add the query, close out the database and thank the user.
       mysql_query($query) or die();
-      message("Thank you for your participation");
+      mysql_close();
+      message("Thank you for your participation.");
       //
     }
     else {
