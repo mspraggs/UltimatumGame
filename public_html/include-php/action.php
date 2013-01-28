@@ -6,7 +6,7 @@ if(!isset($_GET['action'])) {
 else {
  //Else figure out which page to include
   if($_GET['action']=="play") {
-    include("../include-php/game1.php");
+    include("include-php/game1.php");
   }
   elseif($_GET['action']=="respond") {
     include("../include-php/respond.php");
