@@ -16,3 +16,7 @@ h1 {
 p {
     font-family: Arial;
 }
+
+div.form {
+    text-align: center;
+}
