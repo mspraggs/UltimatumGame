@@ -5,6 +5,6 @@
    <br />
    <p>Email (optional):</p>
    <input type="text" name="email" />
-   <br/>
+   <br/><br />
    <input type="submit" value="Submit" />
 </div>

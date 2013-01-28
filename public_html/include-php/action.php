@@ -6,13 +6,9 @@ if(!isset($_GET['action']))
   }
 else
   { //Else figure out which page to include
-    if($_GET['action']=="offer")
+    if($_GET['action']=="game1")
       {
-	include("include-html/offer.php");
-      }
-    elseif($_GET['action']=="thread")
-      {
-	include("include-html/respond.php");
+	include("include-html/game1.php");
       }
     else
       {
