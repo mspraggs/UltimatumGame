@@ -8,7 +8,7 @@ else
   { //Else figure out which page to include
     if($_GET['action']=="game1")
       {
-	include("include-html/game1.php");
+	include("include-php/game1.php");
       }
     else
       {
