@@ -25,7 +25,7 @@ else {
     else {
       //If the number isn't between 0 and 100, we've got a problem
       include("include-html/offer.html");
-      message("Please enter a number between 0 and 100.")
+      message("Please enter a number between 0 and 100.");
     }
   }
   else {
