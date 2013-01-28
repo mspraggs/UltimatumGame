@@ -10,6 +10,7 @@ else {
     //Grab the numerical value from the post data.
     $offer = filter_var($_POST['offer'],FILTER_SANITIZE_NUMBER_INT);
     if($offer <= 100 && $offer >= 0) {
+      include("../protected-324hjk/sql_connect.php");
       sql_connect("ultimatumgame");
       if($_POST['email'] != "" && filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
 	$email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
