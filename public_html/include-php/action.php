@@ -2,7 +2,7 @@
 if(!isset($_GET['action']))
   {
     //if it's not set, display the homepage.
-    include("2IAcowwxOi/home2.php");
+    include("include-html/index.php");
   }
 else
   { //Else figure out which page to include
