@@ -11,7 +11,7 @@ function result($row) {
 
 function download() {
   ?>
-  <p><a href="index.php?action=download">Download</a></p>
+  <p><a href="download.php">Download</a></p>
   <?php
 }
 
