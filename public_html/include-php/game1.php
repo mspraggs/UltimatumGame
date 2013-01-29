@@ -7,7 +7,7 @@ $query = "select offer where result=''";
 
 $results = mysql_query($query);
 
-if(mysql_num_rows($query) == 0 || rand(0,1) == 0) {
+if(mysql_num_rows($results) == 0 || rand(0,1) == 0) {
   header("Location: index.php?action=offer");
 }
 else {
