@@ -2,7 +2,7 @@
 
 //First check for the csrf token to protect against cross site requests.
 if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
-  include("include-html/message.php");
+  include_once("include-html/message.php");
 
   //Check to see if the user is trying to submit their offer
   if(!isset($_POST['offer'])) {
