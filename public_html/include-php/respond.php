@@ -1,4 +1,5 @@
 <?php
+//First check for the csrf token to protect against cross site requests.
 if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
   if(!isset($_POST['result']) || !isset($_POST['id'])) {
     include_once("../protected-324hjk/sql_connect.php");
@@ -12,7 +13,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
     //We're only bothered about the first result: we only need one.
     $first_result = mysql_fetch_array($results);
   
-    response_form($first_result['offer'],$first_result['id']);
+    response_form($first_result['offer'],$first_result['id'], $_GET['csrf']);
   }
   else {
     include_once("include-html/message.php");
