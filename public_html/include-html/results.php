@@ -9,6 +9,11 @@ function result($row) {
 <?php
 }
 
+function download() {
+  ?>
+  <p><a href="results.txt">Download</a></p>
+}
+
 function pagination($page,$last) {
 ?>
   <div class="pagination">
