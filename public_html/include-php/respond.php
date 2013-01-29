@@ -6,7 +6,7 @@ if(!isset($_POST['result']) || !isset($_POST['id'])) {
 
   sql_connect("ultimatumgame");
 
-  $query = "select id, offer from game1 where result is not null order by rand()";
+  $query = "select id, offer from game1 where result is null order by rand()";
   $results = mysql_query($query);
 
   //We're only bothered about the first result: we only need one.
@@ -18,7 +18,6 @@ else {
   include_once("include-html/message.php");
   echo "id = ".$_POST['id'];
   if($_POST['result'] != "accept" && $_POST['result'] != "reject") {
-    echo "It's failing at the result validation";
     message("Oops! There was a problem validating your request. Please try again.");
   }
   elseif(filter_var($_POST['id'],FILTER_VALIDATE_INT)) {
@@ -37,7 +36,6 @@ else {
     message("Thank you for your participation.");
   }
   else {
-    echo "It didn't work!";
     message("Oops! There was a problem validating your request. Please try again.");
   }
 }
