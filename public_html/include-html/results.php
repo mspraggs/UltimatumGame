@@ -9,6 +9,12 @@ function result($row) {
 <?php
 }
 
+function download() {
+  ?>
+  <p><a href="index.php?action=download">Download</a></p>
+  <?php
+}
+
 function pagination($page,$last) {
 ?>
   <div class="pagination">
