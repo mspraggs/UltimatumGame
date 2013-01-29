@@ -3,11 +3,11 @@
 //First check for the csrf token to protect against cross site requests.
 if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
   include_once("include-html/message.php");
+  include("include-html/offer.php");
 
   //Check to see if the user is trying to submit their offer
   if(!isset($_POST['offer'])) {
     //If not, give them the form.
-    include("include-html/offer.php");
     offer_form($_GET['csrf']);
   }
   else {
@@ -32,18 +32,19 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
 	//Add the query, close out the database and thank the user.
 	mysql_query($query) or die();
 	mysql_close();
+	session_destroy();
 	message("Thank you for your participation.");
 	//
       }
       else {
 	//If the number isn't between 0 and 100, we've got a problem
-	include("include-html/offer.html");
+	offer_form($_GET['csrf']);
 	message("Please enter a number between 0 and 100.");
       }
     }
     else {
       //The input must be numeric, otherwise we'll run into trouble
-      include("include-html/offer.html");
+      offer_form($_GET['csrf']);
       message("Please enter a number between 0 and 100.");
     }
   }
