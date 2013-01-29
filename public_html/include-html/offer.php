@@ -1,5 +1,8 @@
+<?php
+function offer_form($csrf) {
+?>
 <div class="form">
-   <form action="index.php?action=offer" method="post">
+   <form action="index.php?action=offer&csrf=<?php echo $csrf; ?>" method="post">
      <p>Offer: </p>
      <input type="text" name="offer" />
      <br />
@@ -9,3 +12,6 @@
      <input type="submit" value="Submit" />
    </form>
 </div>
+<?php
+}
+?>
