@@ -30,7 +30,7 @@ elseif($pagenum>$last) $pagenum=$last;
 //Construct the pagination query filter
 $max='LIMIT '.($pagenum-1)*$page_rows.','.$page_rows;
 
-$query="select player, offer, result from game1 where result is not null $max"
+$query="select player, offer, result from game1 where result is not null $max";
 $results = mysql_query($query);
 mysql_close();
 
