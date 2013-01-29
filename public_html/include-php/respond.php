@@ -23,7 +23,23 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
     elseif(filter_var($_POST['id'],FILTER_VALIDATE_INT)) {
       $id = filter_var($_POST['id'],FILTER_SANITIZE_NUMBER_INT);
       $result = $_POST['result'];
+
+      $query = "select email, offer, contact from game1 where id=$id";
+      $result = mysql_query($query);
+      if($result['contact']=="Y") {
+	$subject = "Ultimatum game result";
+	$email = $result['email'];
+	$message = "Your offer of ".$result['offer']." coins was ";
+	if($result == "accept") $message = $message."accepted";
+	else $message = $message."rejected";
+	$message = " by Player 2. Your email address has now been removed from the database";
+	mail($email,$subject,$message);
+	mysql_query("update game1 set email=NULL,contact='N' where id=$id");
+      }
+      //Need something in here to handle the situation that could arise if an offer has already been responded to.
       $query = "";
+
+      //Also need some code to grab the email address and let the Player 1 know the outcome of their offer, if they asked for it.
 
       if($result == "accept") {
 	$query = "update game1 set result='Y' where id=$id";

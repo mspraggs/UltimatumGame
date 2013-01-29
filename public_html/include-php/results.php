@@ -9,6 +9,7 @@ $results = mysql_query($query);
 mysql_close();
 
 while($row = mysql_fetch_array($results)) {
+  //Probably going to need some pagination in here.
   result($row);
 }
 ?>
