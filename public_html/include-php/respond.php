@@ -33,10 +33,11 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token2']) {
 	if($row['contact']=="Y") {
 	  $subject = "Ultimatum game result";
 	  $email = $row['email'];
-	  $message = "Your offer of ".$row['offer']." coins was ";
+	  $message = "You have received this message because you played the ultimatum game as Player 1.\n\n"
+	  $message = $message."Your offer of ".$row['offer']." coins was ";
 	  if($result == "accept") $message = $message."accepted";
 	  else $message = $message."rejected";
-	  $message = " by Player 2. Your email address has now been removed from the database";
+	  $message = $message." by Player 2. Your email address has now been removed from the database";
 	  mail($email,$subject,$message);
 	  mysql_query("update game1 set email=NULL,contact='N' where id=$id");
 	}
