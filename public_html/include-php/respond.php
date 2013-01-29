@@ -33,7 +33,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token2']) {
 	if($row['contact']=="Y") {
 	  $subject = "Ultimatum game result";
 	  $email = $row['email'];
-	  $message = "You have received this message because you played the ultimatum game as Player 1.\n\n";
+	  $message = "You have received this message because you took part in a study where you played the ultimatum game as Player 1.\n\n";
 	  $message = $message."Your offer of ".$row['offer']." coins was ";
 	  if($result == "accept") $message = $message."accepted";
 	  else $message = $message."rejected";
