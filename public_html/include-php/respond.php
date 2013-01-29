@@ -1,6 +1,6 @@
 <?php
 //First check for the csrf token to protect against cross site requests.
-if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
+if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token2']) {
   include_once("../protected-324hjk/sql_connect.php");
   if(!isset($_POST['result']) || !isset($_POST['id'])) {
     include_once("include-html/respond.php");

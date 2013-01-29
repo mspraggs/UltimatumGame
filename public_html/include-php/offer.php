@@ -1,7 +1,7 @@
 <?php
 
 //First check for the csrf token to protect against cross site requests.
-if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
+if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token1']) {
   include_once("include-html/message.php");
   include("include-html/offer.php");
 
