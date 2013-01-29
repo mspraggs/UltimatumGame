@@ -6,10 +6,9 @@ sql_connect("ultimatumgame");
 $query = "select offer where result is null";
 
 $results = mysql_query($query);
-echo $results;
 $a = rand(0,1);
-//$b = mysql_num_rows($results);
-//echo $b;
+$b = mysql_num_rows($results);
+echo $b;
 
 if(0 == 0 || $a == 0) {
   //echo "<br />".$b."<br />".$a;
