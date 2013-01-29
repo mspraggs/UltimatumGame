@@ -6,6 +6,6 @@ $results = mysql_query($query);
 
 header("Content-Type: text/plain");
 while($row = mysql_fetch_array($results)) {
-  echo "Matthew Spraggs ".$row['player']." ".$row['offer']." ".$row['result']."\n";
+  echo "MatthewSpraggs ".$row['player']." ".$row['offer']." ".$row['result']."\n";
 }
 ?>
