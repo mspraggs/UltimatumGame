@@ -17,6 +17,9 @@ else {
   elseif($_GET['action']=="results") {
     include("include-php/results.php");
   }
+  elseif($_GET['action']=="download") {
+    include("include-php/download.php")
+  }
   else {
     include("include-html/index.html");
   }
