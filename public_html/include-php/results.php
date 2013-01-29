@@ -36,12 +36,9 @@ $query="select player, offer, result from game1 where result is not null $max";
 $results = mysql_query($query);
 mysql_close();
 
-file_put_contents("results.txt","");
-
 while($row = mysql_fetch_array($results)) {
   //Probably going to need some pagination in here.
   result($row);
-  file_put_contents("MatthewSpraggs ".$row['player']." ".$row['offer']." ".$row['result']);
 }
 pagination($pagenum,$last);
 ?>
