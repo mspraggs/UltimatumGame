@@ -10,7 +10,7 @@ $a=rand(0,1);
 $b=mysql_num_rows($results);
 echo $b;
 
-if($b == 0 || $a == 0) {
+if(0 == 0 || $a == 0) {
   echo "<br />".$b."<br />".$a;
   //header("Location: index.php?action=offer");
 }
