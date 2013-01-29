@@ -8,7 +8,7 @@ $query = "select player,offer,result from game where result is not null";
 $results = mysql_query($query);
 mysql_close();
 
-for($row = mysql_fetch_array($results)) {
+while($row = mysql_fetch_array($results)) {
   result($row);
 }
 
