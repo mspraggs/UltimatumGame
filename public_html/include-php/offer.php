@@ -33,6 +33,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
 	mysql_query($query) or die();
 	mysql_close();
 	session_destroy();
+      setcookie("participated", "true", time()+5184000);
 	message("Thank you for your participation.");
 	//
       }
