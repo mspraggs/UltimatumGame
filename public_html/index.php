@@ -8,6 +8,7 @@
    <div id="content">
    <h1>Ultimatum Game</h1>
    <?php
+   session_start();
    include("include-php/action.php");
 ?>
 </div>

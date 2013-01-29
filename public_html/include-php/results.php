@@ -11,5 +11,4 @@ mysql_close();
 while($row = mysql_fetch_array($results)) {
   result($row);
 }
-
 ?>
