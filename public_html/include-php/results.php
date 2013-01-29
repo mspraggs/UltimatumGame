@@ -3,6 +3,8 @@
 include_once("../protected-324hjk/sql_connect.php");
 include_once("include-html/results.php");
 
+download();
+
 //Check if we're using pagination
 if(!(isset($_GET['pagenum']))) {
   //If not set, set the pagenumber to 1
@@ -34,9 +36,12 @@ $query="select player, offer, result from game1 where result is not null $max";
 $results = mysql_query($query);
 mysql_close();
 
+file_put_contents("results.txt","");
+
 while($row = mysql_fetch_array($results)) {
   //Probably going to need some pagination in here.
   result($row);
+  file_put_contents("MatthewSpraggs ".$row['player']." ".$row['offer']." ".$row['result']);
 }
 pagination($pagenum,$last);
 ?>
