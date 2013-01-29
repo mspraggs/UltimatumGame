@@ -1,8 +1,12 @@
 <div class="form">
-  <form action="index.php?action=response">
-    <input type="submit" value="Accept">
-    <br />
-    <br />
-    <input type="submit" value="Reject">
+  <form action="index.php?action=response" method="post">
+    <input type="submit" value="Accept" />
+    <input type="hidden" name="result" value="accept" />
+  </form>
+  <br />
+  <br />
+  <form action="index.php?action=response" method="post">
+    <input type="submit" value="Reject" />
+    <input type="hidden" name="result" value="reject" />
   </form>
 </div>
