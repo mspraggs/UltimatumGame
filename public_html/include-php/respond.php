@@ -16,7 +16,6 @@ if(!isset($_POST['result']) || !isset($_POST['id'])) {
 }
 else {
   include_once("include-html/message.php");
-  echo "id = ".$_POST['id'];
   if($_POST['result'] != "accept" && $_POST['result'] != "reject") {
     message("Oops! There was a problem validating your request. Please try again.");
   }
@@ -32,7 +31,9 @@ else {
       $query = "update game1 set result='N' where id=$id";
     }
 
+    sql_connect("ultimatumgame");
     mysql_query($query);
+    mysql_close();
     message("Thank you for your participation.");
   }
   else {
