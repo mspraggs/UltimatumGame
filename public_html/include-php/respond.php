@@ -1,7 +1,7 @@
 <?php
-include_once("../protected-324hjk/sql_connect.php");
 if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
   if(!isset($_POST['result']) || !isset($_POST['id'])) {
+    include_once("../protected-324hjk/sql_connect.php");
     include_once("include-html/respond.php");
 
     sql_connect("ultimatumgame");
