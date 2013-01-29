@@ -1,7 +1,7 @@
 <?php
 include_once("../protected-324hjk/sql_connect.php");
 
-if(!isset($_COOKIE['participated'])) {
+if(!isset($_COOKIE['participated']) || 1==1) {
 
   sql_connect("ultimatumgame");
   $query = "select offer from game1 where result is null";
