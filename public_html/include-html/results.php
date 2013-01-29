@@ -9,7 +9,7 @@ function result($row) {
 <?php
 }
 
-function pagination($page) {
+function pagination($page,$last) {
 ?>
   <div class="pagination">
     <div id="left">
@@ -39,5 +39,6 @@ function pagination($page) {
   ?>
   </div>
       </div>
+      <?php
       }
 ?>
