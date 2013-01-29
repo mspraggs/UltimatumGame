@@ -18,7 +18,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
   else {
     include_once("include-html/message.php");
     if($_POST['result'] != "accept" && $_POST['result'] != "reject") {
-      message("Oops! There was a problem validating your request. Please try again.");
+      message("There was a problem validating your request. Please try again.");
     }
     elseif(filter_var($_POST['id'],FILTER_VALIDATE_INT)) {
       $id = filter_var($_POST['id'],FILTER_SANITIZE_NUMBER_INT);

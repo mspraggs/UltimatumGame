@@ -53,6 +53,6 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
 }
 else {
   include_once("include-html/message.php");
-  message("Oops! Your session appears to be invalid. Please restart the game and try again.");
+  message("Your session appears to be invalid. Please restart the game and try again.");
 }
 ?>
