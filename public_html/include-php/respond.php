@@ -1,8 +1,8 @@
 <?php
+include_once("../protected-324hjk/sql_connect.php");
 
-if(!isset($_POST['result']) || ) {
+if(!isset($_POST['result']) || !isset($_POST['id'])) {
   include_once("include-html/respond.php");
-  include_once("../protected-324hjk/sql_connect.php");
 
   sql_connect("ultimatumgame");
 
