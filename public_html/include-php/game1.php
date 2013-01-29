@@ -3,7 +3,7 @@ include_once("../protected-324hjk/sql_connect.php");
 
 sql_connect("ultimatumgame");
 
-$query = "select offer where result=''";
+$query = "select offer where result is null";
 
 $results = mysql_query($query);
 $a=rand(0,1);
