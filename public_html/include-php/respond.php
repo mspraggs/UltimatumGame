@@ -24,12 +24,12 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
       $id = filter_var($_POST['id'],FILTER_SANITIZE_NUMBER_INT);
       $result = $_POST['result'];
 
-      $query = "select email, offer, contact from game1 where id=$id";
-      $result = mysql_query($query);
-      if($result['contact']=="Y") {
+      $query = "select email, offer, result, contact from game1 where id=$id";
+      $row = mysql_query($query);
+      if($row['contact']=="Y") {
 	$subject = "Ultimatum game result";
-	$email = $result['email'];
-	$message = "Your offer of ".$result['offer']." coins was ";
+	$email = $row['email'];
+	$message = "Your offer of ".$row['offer']." coins was ";
 	if($result == "accept") $message = $message."accepted";
 	else $message = $message."rejected";
 	$message = " by Player 2. Your email address has now been removed from the database";
