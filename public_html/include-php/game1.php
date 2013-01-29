@@ -20,6 +20,6 @@ if(!isset($_COOKIE['participated'])) {
 }
 else {
   include_once("include-html/message.php");
-  message("It looks like you've already participated. Thank you!")
+  message("It looks like you've already participated. Thank you!");
 }
 ?>
