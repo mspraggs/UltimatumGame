@@ -35,6 +35,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
       mysql_query($query);
       mysql_close();
       message("Thank you for your participation.");
+      session_destroy();
     }
     else {
       message("Oops! There was a problem validating your request. Please try again.");
