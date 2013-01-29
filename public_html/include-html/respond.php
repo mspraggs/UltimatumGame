@@ -2,7 +2,7 @@
 
 function response_form($offer,$offer_id, $csrf) {
 ?>
-<p>You have been offered <?php echo $offer; ?> coins (pounds, dollars, or other currency of your choosing) by the first player in this game, out of a total of one hundred coins. If you accept their offer, you will receive <?php echo $offer; ?> coins and the first player will receive the remainder from the original pile of one hundred. If you refuse the offer, neither of you will receive anything. Please decide whether to accept the offer or not. Remember that you should choose based on what you'd do if this scenario was real.</p>
+  <p>You are Player 2, and have been offered <?php echo $offer; ?> coins. Please decide whether to accept or reject this offer. Please make the same decision as if real coins were on offer.</p>
 
 <div class="form">
     <form action="index.php?action=respond&csrf=<?php echo $csrf; ?>" method="post">
