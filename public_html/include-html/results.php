@@ -19,9 +19,9 @@ function pagination($page,$last) {
       echo " ";
     }
     else {
-      echo "<a href='index.php?action=results&pagenum=1'>First</a>";
+      echo "<p><a href='index.php?action=results&pagenum=1'>First</a>";
       $previous=$page-1;
-      echo " <a href='index.php?action=results&pagenum=$previous'>Previous</a>";
+      echo " <a href='index.php?action=results&pagenum=$previous'>Previous</a></p>";
     }
   ?>
   </div>
@@ -33,8 +33,8 @@ function pagination($page,$last) {
       }
       else {
 	$next=$page+1;
-	echo " <a href='index.php?action=results&pagenum=$next'>Next</a> ";
-	echo "<a href='index.php?action=results&pagenum=$last'>Last</a>";
+	echo "<p><a href='index.php?action=results&pagenum=$next'>Next</a> ";
+	echo "<a href='index.php?action=results&pagenum=$last'>Last</a></p>";
       }
   ?>
   </div>
