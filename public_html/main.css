@@ -20,3 +20,19 @@ p {
 div.form {
     text-align: center;
 }
+
+a {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    test-decoration: none;
+}
+
+a:link, a:visited {
+    color: black;
+}
+
+a:hover, a:active {
+    color: #555;
+}
