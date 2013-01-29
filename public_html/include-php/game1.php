@@ -8,6 +8,7 @@ $query = "select offer where result is null";
 $results = mysql_query($query);
 $a=rand(0,1);
 $b=mysql_num_rows($results);
+echo $b;
 
 if($b == 0 || $a == 0) {
   echo "<br />".$b."<br />".$a;
