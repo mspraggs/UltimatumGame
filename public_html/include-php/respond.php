@@ -25,6 +25,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
       $result = $_POST['result'];
 
       $query = "select email, offer, result, contact from game1 where id=$id";
+      sql_connect("ultimatumgame");
       $row = mysql_query($query);
       //Check if someone's written to the entry in the time it's taken the user to submit the form.
       if(is_null($row['result'])) {
@@ -50,7 +51,6 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
 	  $query = "update game1 set result='N' where id=$id";
 	}
 
-	sql_connect("ultimatumgame");
 	mysql_query($query);
 	mysql_close();
 	message("Thank you for your participation.");
