@@ -12,7 +12,7 @@ $a = rand(0,1);
 echo $b;
 
 if(0 == 0 || $a == 0) {
-  echo "<br />".$b."<br />".$a;
+  //echo "<br />".$b."<br />".$a;
   //header("Location: index.php?action=offer");
 }
 else {
