@@ -16,6 +16,7 @@ if(!isset($_POST['result']) || !isset($_POST['id'])) {
 }
 else {
   include_once("include-html/message.php");
+  echo $_POST['id'];
   if($_POST['result'] != "accept" && $_POST['result'] != "reject") {
     echo "It's failing at the result validation";
     message("Oops! There was a problem validating your request. Please try again.");
