@@ -26,8 +26,9 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
 
       $query = "select email, offer, result, contact from game1 where id=$id";
       $row = mysql_query($query);
+      //Check if someone's written to the entry in the time it's taken the user to submit the form.
       if(is_null($row['result'])) {
-      
+	//Contact Player 1 if they asked us to.
 	if($row['contact']=="Y") {
 	  $subject = "Ultimatum game result";
 	  $email = $row['email'];
@@ -38,7 +39,6 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token']) {
 	  mail($email,$subject,$message);
 	  mysql_query("update game1 set email=NULL,contact='N' where id=$id");
 	}
-	//Need something in here to handle the situation that could arise if an offer has already been responded to.
 	$query = "";
 
 	//Also need some code to grab the email address and let the Player 1 know the outcome of their offer, if they asked for it.
