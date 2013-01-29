@@ -14,6 +14,9 @@ else {
   elseif($_GET['action']=="offer") {
     include("include-php/offer.php");
   }
+  elseif($_GET['action']=="results") {
+    include("include-php/results.php");
+  }
   else {
     include("include-html/index.html");
   }
