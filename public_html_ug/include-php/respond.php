@@ -38,7 +38,7 @@ if(isset($_GET['csrf']) && $_GET['csrf'] == $_SESSION['token2']) {
 	  if($result == "accept") $message = $message."accepted";
 	  else $message = $message."rejected";
 	  $message = $message." by Player 2. Your email address has now been removed from the database";
-	  mail($email,$subject,$message);
+	  mail($email,$subject,$message, "From: Ultimatum Game <webmaster@ultimatumgame.net");
 	  mysql_query("update game1 set email=NULL,contact='N' where id=$id");
 	}
 	$query = "";
