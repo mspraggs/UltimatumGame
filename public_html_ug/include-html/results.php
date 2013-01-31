@@ -5,7 +5,7 @@ function result($row) {
   $offer = $row['offer'];
   $result = $row['result'];
 ?>
-  <p><?php echo "Offer: ".$offer." Offer accepted? ".$result; ?></p>
+  <p><?php echo "Offer: ".$offer."<br/> Offer accepted? ".$result; ?></p>
 <?php
 }
 
