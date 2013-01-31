@@ -1,7 +1,7 @@
 <?php
 function offer_form($csrf) {
 ?>
-<p>You are Player 1. Please select the number of coins to offer to Player 2 from the pile of one hundred. Please offer the number of coins that you would offer if you were playing with real coins.</p>
+<p>You are Player 1. Please select the number of coins to offer to Player 2 from your pile of one hundred. Please offer the number of coins that you would offer if you were playing with real coins.</p>
 <div class="form">
    <form action="index.php?action=offer&csrf=<?php echo $csrf; ?>" method="post">
      <p>Offer: </p>
